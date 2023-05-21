@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-compatible" content="IE=edge"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Pride Models Africaa</title>    
+    <link rel="stylesheet" href="style.css"/> 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#who-we-are">WHO WE ARE</a>
+        <a href="assignment8test/Trialappointment.html">CASTING</a>    
+        <a href="previousworks/photoslide.html">PREVIOUS WORKS</a>
+        <a href="photoshow/index.html">MAILING LIST</a>
+    </nav>
+</header>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="typed.min.js"></script>
+<script src="script.js"></script>
+
+<img src="images/pmNew.png" alt="Logo">
+
+<div class="typed">
+    <h1>Be <span class="anim"></span></h1>
+</div>
+
+<script src="typed.js"></script>
+<script> 
+    var typed = new Typed('.anim', {
+        // Waits 1000ms after typing "First"
+        strings: ['Fearless', 'Bold', 'Beautiful']
+    });
+</script>
+
+<div id="who-we-are">
+    <h1>WHO WE ARE</h1>
+    <!-- Content for WHO WE ARE section -->
+</div>
+
+<div id="contacts">
+    <h1>CONTACTS</h1>
+    
+    
+    
+</div>
+
+<div id="previousworks">
+    <h1>PREVIOUS WORKS</h1>
+    <!-- Content for SPONSORS section -->
+</div>
+
+<footer>
+    <div class="main-content">
+        <div class="left box">
+            <h2>About Us</h2>
+            <div class="content">
+                <p>Vivamus at venenatis nisi, eget tristique libero. Suspendisse lacinia</p>
+                <div class="social"></div>
+                <a href="#"><span class="fab fa-facebook-f"></span></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+</body>
+</html>
