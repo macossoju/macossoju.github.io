@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Ama Ayodele",
+    "image": "https://i.pinimg.com/originals/1c/8c/21/1c8c2109e066c7c8c3227444bc463112.jpg",
+    "location": "Lagos, Nigeria",
+    "gender": "Female",
+    "age": 28
+  },
+  {
+    "name": "Justino Macosso",
+    "image": "https://media.licdn.com/dms/image/C4D03AQG93di7gi2O3Q/profile-displayphoto-shrink_800_800/0/1633529688403?e=2147483647&v=beta&t=k5gvu4vtJD9YZ9_3DsR_SzldqHO-OsfbO-CjiJQ1I2Q",
+    "location": "Cabinda, Angola",
+    "gender": "Male",
+    "age": 24
+  },
+  {
+    "name": "Zahara Ndlovu",
+    "image": "https://i.pinimg.com/236x/a2/d5/98/a2d598247f46edbf45114ff5e2e44136--women-models-teen-vogue.jpg",
+    "location": "Johannesburg, South Africa",
+    "gender": "Female",
+    "age": 25
+  },
+  {
+    "name": "Musa Kamara",
+    "image": "https://res.cloudinary.com/next-management/image/upload/c_fill,f_auto,g_north,h_720,q_auto:best,w_540/v1/photos/kpv0hgnz5lqfabti7k5z",
+    "location": "Nairobi, Kenya",
+    "gender": "Male",
+    "age": 30
+  },
+  {
+    "name": "Leyla Diop",
+    "image": "https://i.pinimg.com/originals/64/40/ef/6440ef1db761e57d93566fb0c8a20545.jpg",
+    "location": "Dakar, Senegal",
+    "gender": "Female",
+    "age": 26
+  },
+  {
+    "name": "Jabari Nkosi",
+    "image": "https://mediaslide-europe.storage.googleapis.com/thetribe/pictures/662/3355/large-1645092825-6199652830a384ab12630396bcddf044.jpg",
+    "location": "Cape Town, South Africa",
+    "gender": "Male",
+    "age": 29
+  },
+  {
+    "name": "Asha Jallow",
+    "image": "https://assets.adidas.com/images/w_940,f_auto,q_auto/155813095f8c4faaa422ae3e011a4806_9366/HM3155_21_model.jpg",
+    "location": "Dakar, Senegal",
+    "gender": "Female",
+    "age": 24
+  },
+  {
+    "name": "Kwesi Osei",
+    "image": "https://asset1.modelmanagement.com/mm-eyJ0Ijp7InIiOnsibCI6/IjE2MDAiLCJoIjoiNTEy/In19LCJpZCI6ImkzNTM2/MjYyIiwiZiI6ImpwZyJ9.jpg",
+    "location": "Accra, Ghana",
+    "gender": "Male",
+    "age": 27
+  },
+   
+  {
+    "name": "Oba Akinwande",
+    "image": "https://cdn.create.vista.com/api/media/small/221370892/stock-photo-black-white-photo-smiling-african",
+    "location": "Lagos, Nigeria",
+    "gender": "Male",
+    "age": 31
+  }
+  
+  
+    ]

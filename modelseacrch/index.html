@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Model Search</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #result {
+      position: absolute;
+      width: 100%;
+      max-width: 870px;
+      cursor: pointer;
+      overflow-y: auto;
+      max-height: 400px;
+      box-sizing: border-box;
+      z-index: 1001;
+    }
+    .link-class:hover {
+      background-color: #f1f1f1;
+    }
+    .preview-box {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      display: none;
+      z-index: 1002;
+    }
+    .preview-box img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <br /><br />
+  <div class="container" style="width: 900px;">
+    <h2 align="center">Our Models</h2>
+    <h3 align="center">Model Information</h3>
+    <br /><br />
+    <div align="center">
+      <input type="text" name="search" id="search" placeholder="Search model Details" class="form-control" />
+    </div>
+    <ul class="list-group" id="result"></ul>
+    <br />
+    <div class="preview-box" id="preview-box"></div>
+  </div>
+</body>
+</html>
+
+<script>
+  $(document).ready(function() {
+    $.ajaxSetup({ cache: false });
+
+    var isPreviewVisible = false; // Track if preview is visible
+
+    $('#search').keyup(function() {
+      $('#result').html('');
+      $('#state').val('');
+      var searchField = $('#search').val();
+      var expression = new RegExp(searchField, "i");
+      $.getJSON('data.json', function(data) {
+        $.each(data, function(key, value) {
+          if (value.name.search(expression) != -1 || value.location.search(expression) != -1) {
+            $('#result').append('<li class="list-group-item link-class" data-image="' + value.image + '"><img src="' + value.image + '" height="40" width="40" class="img-thumbnail" /> ' + value.name + ' | <span class="text-muted">' + value.location + '</span></li>');
+          }
+        });
+      });
+    });
+
+    $('#result').on('click', 'li', function() {
+      var click_text = $(this).text().split('|');
+      var imageName = $.trim(click_text[0]);
+      var imageURL = $(this).data('image');
+      $('#search').val(imageName);
+      showImagePreview(imageURL);
+      $("#result").html('');
+      isPreviewVisible = true; // Set preview visibility to true
+    });
+
+    function showImagePreview(imageURL) {
+      var previewBox = $('#preview-box');
+      previewBox.html('<img src="' + imageURL + '">');
+      previewBox.fadeIn();
+    }
+
+    // Click event outside the result list and preview box
+    $(document).on('click', function(event) {
+      if (!$(event.target).closest('#result, #search').length) {
+        $('#result').html('');
+      }
+      if (!$(event.target).closest('#preview-box, #search').length && !isPreviewVisible) {
+        $('#preview-box').fadeOut();
+      }
+      isPreviewVisible = false; // Reset preview visibility
+    });
+  });
+</script>
